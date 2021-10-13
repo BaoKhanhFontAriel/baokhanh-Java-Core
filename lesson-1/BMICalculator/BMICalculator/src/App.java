@@ -12,6 +12,11 @@ public class App {
 
         // in ket qua BMI tra ve double co tham so 
         System.out.println("ket qua BMI tra ve double co tham so: " + app.doubleBMICalcWithPara(1.70, 70));
+        System.out.println("ket qua BMI tra ve double co tham so: " + app.doubleBMICalcWithPara(1.79, 65));
+
+        // Dùng phương thức trả về double có thám số là tốt nhất
+        // vì có thể dùng lại phương thức
+        // để tính bmi với các biến số height và weight khác nhau
 
         Person Popo = new Person();
         Popo.name = "Popo";
