@@ -45,8 +45,5 @@ public class Main {
         // hợp nhất để tạo ra chuỗi có chữ cái đàu và cuối viết hoa
         String new_s2 = s2_first_char + s2_no_first_last + s2_last_char;
         System.out.println("chuỗi có chữ cái đàu và cuối viết hoa: "+ new_s2);
-
-        char c1 = s.charAt(0);
-        char c_last = s.charAt(s.length() - 1);
     }
 }
