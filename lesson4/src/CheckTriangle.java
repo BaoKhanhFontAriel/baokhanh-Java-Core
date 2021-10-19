@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-public class CheckTriangle {
-    private int sideA, sideB, sideC;
+public class CheckTriangle { 
 
-    public void enterInput() {
+    public static void enterInput() {
+        int sideA, sideB, sideC;
         Scanner scanner = new Scanner(System.in);
         System.out.println("nhập 3 cạnh: ");
         System.out.print("a = ");
@@ -12,19 +12,19 @@ public class CheckTriangle {
         sideB = scanner.nextInt();
         System.out.print("c = ");
         sideC = scanner.nextInt();
-        checkInput();
+        checkInput(sideA, sideB, sideC);
         scanner.close();
     }
 
-    public void checkInput() {
+    public static void checkInput(int sideA, int sideB, int sideC) {
         if (sideA + sideB > sideC && sideA + sideC > sideB && sideB + sideC > sideA) {
             System.out.println("Có tam giác được tạo thành từ giá trị của 3 cạnh");
-            findTriagleType();
+            findTriagleType(sideA, sideB, sideC);
         } else
             System.out.println("không có tam giác được tạo thành từ giá trị của 3 cạnh");
     }
 
-    public void findTriagleType() {
+    public static void findTriagleType(int sideA, int sideB, int sideC) {
         if (Math.pow(sideA, 2) == Math.pow(sideB, 2) + Math.pow(sideC, 2) || Math.pow(sideB, 2) == Math.pow(sideB, 2) + Math.pow(sideA, 2)
                 || Math.pow(sideC, 2) == Math.pow(sideB, 2) + Math.pow(sideA, 2)) {
             System.out.println("đó là 1 tam giác vuông");

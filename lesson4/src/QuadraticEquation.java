@@ -1,8 +1,10 @@
 import java.util.Scanner;
 public class QuadraticEquation {
-    private int a, b, c;
+    private static int a;
+    private static int b;
+    private static int c;
 
-    public void enterInput(){
+    public static void enterInput(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("phương trình bậc 2 có dạng ax^2 + bx + c = 0 với a != 0");
         System.out.println("nhập 3 hệ số: ");
@@ -16,7 +18,7 @@ public class QuadraticEquation {
         scanner.close();
     }
 
-    public void findRoot(){
+    public static void findRoot(){
         double delta = calcDelta();
         if (delta < 0){
             System.out.println("phương trình vô nghiệm");
@@ -33,7 +35,7 @@ public class QuadraticEquation {
 
     }
 
-    public double calcDelta(){
+    public static double calcDelta(){
         return (double) Math.pow(b,2) - 4 * a * c;
     }
 

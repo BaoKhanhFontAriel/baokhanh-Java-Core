@@ -15,15 +15,13 @@ public class App {
         int chooseHomework = scanner.nextInt();
         switch (chooseHomework) {
             case 1:
-                CheckTriangle triangle = new CheckTriangle();
-                triangle.enterInput();
+                CheckTriangle.enterInput();
                 break;
             case 2:
-                
+                GPA.enterInput();
                 break;
             case 3:
-                QuadraticEquation quadraticEquation = new QuadraticEquation();
-                quadraticEquation.enterInput();
+                QuadraticEquation.enterInput();
                 break;
             default:
                 System.out.println("không có bài tập này");
