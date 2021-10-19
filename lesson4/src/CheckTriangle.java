@@ -1,23 +1,23 @@
 import java.util.Scanner;
 
-public class Triangle {
-    private int a, b, c;
+public class CheckTriangle {
+    private int sideA, sideB, sideC;
 
     public void enterInput() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("nhập 3 cạnh: ");
         System.out.print("a = ");
-        a = scanner.nextInt();
+        sideA = scanner.nextInt();
         System.out.print("b = ");
-        b = scanner.nextInt();
+        sideB = scanner.nextInt();
         System.out.print("c = ");
-        c = scanner.nextInt();
-        calcInput();
+        sideC = scanner.nextInt();
+        checkInput();
         scanner.close();
     }
 
-    public void calcInput() {
-        if (a + b > c && a + c > b && b + c > a) {
+    public void checkInput() {
+        if (sideA + sideB > sideC && sideA + sideC > sideB && sideB + sideC > sideA) {
             System.out.println("Có tam giác được tạo thành từ giá trị của 3 cạnh");
             findTriagleType();
         } else
@@ -25,11 +25,11 @@ public class Triangle {
     }
 
     public void findTriagleType() {
-        if (Math.pow(a, 2) == Math.pow(b, 2) + Math.pow(c, 2) || Math.pow(b, 2) == Math.pow(b, 2) + Math.pow(a, 2)
-                || Math.pow(c, 2) == Math.pow(b, 2) + Math.pow(a, 2)) {
+        if (Math.pow(sideA, 2) == Math.pow(sideB, 2) + Math.pow(sideC, 2) || Math.pow(sideB, 2) == Math.pow(sideB, 2) + Math.pow(sideA, 2)
+                || Math.pow(sideC, 2) == Math.pow(sideB, 2) + Math.pow(sideA, 2)) {
             System.out.println("đó là 1 tam giác vuông");
-        } else if (a == b) {
-            if (c == b) {
+        } else if (sideA == sideB) {
+            if (sideC == sideB) {
                 System.out.println("đó là 1 tam giác đều");
             } else
                 System.out.println("đó là 1 tam giác cân");
