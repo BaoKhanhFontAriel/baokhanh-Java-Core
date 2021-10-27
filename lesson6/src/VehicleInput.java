@@ -1,8 +1,12 @@
 import java.util.Scanner;
 
 public class VehicleInput{
-    public void getInput(Vehicle[] listVehicle){
-        Scanner scanner = new Scanner(System.in);
+    public static void run(Scanner scanner){
+        Vehicle[] vehicles = new Vehicle[3];
+        getInput(vehicles, scanner);
+        show(vehicles);
+    }
+    public static void getInput(Vehicle[] listVehicle, Scanner scanner){
         for (int i = 0; i < listVehicle.length; i++){
             System.out.println("nhập phương tiện thứ " + (i + 1) + " : ");
             System.out.print("mã: ");
@@ -14,10 +18,9 @@ public class VehicleInput{
             int maxSpeed = scanner.nextInt();
             listVehicle[i] = new Vehicle(id, name, maxSpeed);
         }
-        scanner.close();
     }
 
-    public void show(Vehicle[] listVehicle){
+    public static void show(Vehicle[] listVehicle){
 
         for (Vehicle vehicle: listVehicle){
             System.out.println(vehicle.toString());
