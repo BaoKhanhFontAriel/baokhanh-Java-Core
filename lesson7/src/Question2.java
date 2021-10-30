@@ -11,7 +11,7 @@ public class Question2 {
         int count = 0;
         boolean isPrime = true;
         while (count < 10) {
-            for (int i = 2; i <= num / 2; i++) {
+            for (int i = 2; i <=  Math.sqrt(num); i++) {
                 if (num % i == 0) {
                     isPrime = false;
                     break;
@@ -30,7 +30,7 @@ public class Question2 {
         System.out.println("\nsố nguyên tố nhỏ hơn 10 là: ");
         boolean isPrime = true;
         for (int i = 1; i <= 10; i++) {
-            for (int j = 2; j <= i / 2; j++) {
+            for (int j = 2; j <= Math.sqrt(i); j++) {
                 if (i % j == 0) { 
                     isPrime = false;
                     break;

@@ -8,11 +8,11 @@ public class App {
         // 2
         // Question2.run();
         // 3
-        Question3.run();
+        // Question3.run();
         // 4
         // Question4.run();
         // 5
-        // Question5.run();
+        Question5.run();
         // 6
         // Question6.run();
         // 7
