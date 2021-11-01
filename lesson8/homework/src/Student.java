@@ -16,12 +16,9 @@ public class Student {
         return "id: " + id 
         + "\ntên: " + name 
         + "\nđiểm lý thuyết: " + theoreticalScore 
-        + "\nđiểm thực hành: " + practicalScore 
-        + "\nđiểm trung bình: " + getGPA();
+        + "\nđiểm thực hành: " + practicalScore;
     }
 
-    public double getGPA() {
-        return (theoreticalScore + practicalScore) / 2;
-    }
+
 }
 

@@ -23,8 +23,13 @@ public class App {
         System.out.println("in thong tin: ");
         for (Student student : students) {
             System.out.println(student.toString());
+            System.out.println("Điểm trung bình: " + getGPA(student));
             System.out.println("--------------------------------");
         } 
+    }
+
+    public static double getGPA(Student student) {
+        return (student.theoreticalScore + student.practicalScore) / 2;
     }
 
     public static Student getStudent(Scanner scanner){
