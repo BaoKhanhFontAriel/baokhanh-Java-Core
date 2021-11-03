@@ -39,6 +39,7 @@ public class App {
         System.out.print("\ntên: ");
         String name = scanner.nextLine();
         System.out.print("\nđiểm lý thuyết: ");
+        
         int theoreticalScore = scanner.nextInt();
         System.out.print("\nđiểm thực hành: ");
         int practicalScore = scanner.nextInt();
