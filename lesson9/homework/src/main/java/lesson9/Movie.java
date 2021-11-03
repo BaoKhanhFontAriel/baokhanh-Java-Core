@@ -34,7 +34,7 @@ public class Movie {
     public String convertToHour(int number) {
         int hours = number / 60;
         int minutes = number % 60;
-        String runningTime = String.format("%d:%02d", hours, minutes);
+        String runningTime = String.format("%dh %02dm", hours, minutes);
         return runningTime;
     }
 }
