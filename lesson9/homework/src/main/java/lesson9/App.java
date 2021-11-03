@@ -1,13 +1,15 @@
 package lesson9;
 
-/**
- * Hello world!
- *
- */
+import java.util.ArrayList;
+
+import com.google.gson.Gson;
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        MovieRepository repo = new MovieRepository();
+        ArrayList<Movie> movies = repo.getData();
+        repo.printList(movies);
     }
 }
