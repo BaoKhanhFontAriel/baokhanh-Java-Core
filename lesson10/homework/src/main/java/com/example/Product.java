@@ -8,27 +8,27 @@ public class Product {
     private int selling_price;
     private String category;
     private int inventory;
-    private int number_of_sale;
+    private int sales_quantity;
 
 
-    public Product(int id, String product_name, int selling_price, String category, int inventory, int number_of_sale) {
+    public Product(int id, String product_name, int selling_price, String category, int inventory, int number_of_sales) {
         this.id = id;
         this.product_name = product_name;
         this.selling_price = selling_price;
         this.category = category;
         this.inventory = inventory;
-        this.number_of_sale = number_of_sale;
+        this.sales_quantity = number_of_sales;
     }
 
     public Category getCategory() {
         return Category.getCategory(category);
     }
 
-    public int getSelling_price() {
+    public int getSellingPrice() {
         return selling_price;
     }
 
-    public String getProduct_name() {
+    public String getProductName() {
         return product_name;
     }
 
@@ -40,8 +40,8 @@ public class Product {
         return inventory;
     }
 
-    public int getNumberOfSales() {
-        return number_of_sale;
+    public int getSalesQuantity() {
+        return sales_quantity;
     }
 
     public String format(int number){
@@ -53,6 +53,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return "mã sản phẩm: " + id + " - tên: " + product_name + " - giá bán: " + format(selling_price) + " - danh mục: " + getCategory().getValue() + " - số lượng: " + inventory + " - số lượng bán được: " + number_of_sale; 
+        return "mã sản phẩm: " + id + " - tên: " + product_name + " - giá bán: " + format(selling_price) + " - danh mục: " + category + " - số lượng: " + inventory + " - số lượng bán được: " + sales_quantity;
     }
 }

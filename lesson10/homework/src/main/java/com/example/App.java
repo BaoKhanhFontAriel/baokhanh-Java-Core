@@ -1,6 +1,5 @@
 package com.example;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -46,6 +45,7 @@ public class App {
                 repo.search(name);
                 break;
             case 0:
+                System.exit(0);
                 break;
             default:
                 System.out.println("số bạn chọn không hơp lệ");

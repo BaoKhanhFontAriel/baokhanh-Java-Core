@@ -9,7 +9,6 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Locale;
 
 public class ProductRepository {
     private ArrayList<Product> products;
@@ -34,7 +33,7 @@ public class ProductRepository {
 
     public void sellingPriceMoreThan100000() {
         for (Product product : products) {
-            if (product.getSelling_price() > 100000) {
+            if (product.getSellingPrice() > 100000) {
                 System.out.println(product.toString());
             }
         }
@@ -44,7 +43,7 @@ public class ProductRepository {
         Collections.sort(products, new Comparator<Product>(){
             @Override
             public int compare(Product o1, Product o2) {
-                return o2.getNumberOfSales() - o1.getNumberOfSales(); 
+                return o2.getSalesQuantity() - o1.getSalesQuantity();
             }
         });
     }
@@ -82,7 +81,7 @@ public class ProductRepository {
     public void search(String name){
         boolean isFound = false;
         for (Product product : products){
-            if (product.getProduct_name().toLowerCase().contains(name.toLowerCase())){
+            if (product.getProductName().toLowerCase().contains(name.toLowerCase())){
                 System.out.println(product.toString());
                 isFound = true;
             }
