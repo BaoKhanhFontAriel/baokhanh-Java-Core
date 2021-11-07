@@ -1,0 +1,141 @@
+[{
+  "id": 1,
+  "product_name": "Dynabox",
+  "selling_price": 30000,
+  "category": "mỹ phẩm",
+  "inventory": 800,
+  "number_of_sale": 241
+}, {
+  "id": 2,
+  "product_name": "Shufflester",
+  "selling_price": 40000,
+  "category": "thực phẩm",
+  "inventory": 600,
+  "number_of_sale": 550
+}, {
+  "id": 3,
+  "product_name": "Brainlounge",
+  "selling_price": 10000,
+  "category": "đồ gia dụng",
+  "inventory": 1000,
+  "number_of_sale": 691
+}, {
+  "id": 4,
+  "product_name": "Divavu",
+  "selling_price": 110000,
+  "category": "đồ gia dụng",
+  "inventory": 500,
+  "number_of_sale": "399"
+}, {
+  "id": 5,
+  "product_name": "Dabvine",
+  "selling_price": 190000,
+  "category": "mỹ phẩm",
+  "inventory": 600,
+  "number_of_sale": "470"
+}, {
+  "id": 6,
+  "product_name": "Midel",
+  "selling_price": 170000,
+  "category": "thời trang",
+  "inventory": 800,
+  "number_of_sale": 717
+}, {
+  "id": 7,
+  "product_name": "Photobug",
+  "selling_price": 40000,
+  "category": "thực phẩm",
+  "inventory": 300,
+  "number_of_sale": "214"
+}, {
+  "id": 8,
+  "product_name": "Eabox",
+  "selling_price": 170000,
+  "category": "mỹ phẩm",
+  "inventory": 200,
+  "number_of_sale": "155"
+}, {
+  "id": 9,
+  "product_name": "Oba",
+  "selling_price": 160000,
+  "category": "đồ gia dụng",
+  "inventory": 200,
+  "number_of_sale": "150"
+}, {
+  "id": 10,
+  "product_name": "Kanoodle",
+  "selling_price": 200000,
+  "category": "đồ gia dụng",
+  "inventory": 400,
+  "number_of_sale": "294"
+}, {
+  "id": 11,
+  "product_name": "Oyoloo",
+  "selling_price": 180000,
+  "category": "mỹ phẩm",
+  "inventory": 500,
+  "number_of_sale": "385"
+}, {
+  "id": 12,
+  "product_name": "Voomm",
+  "selling_price": 30000,
+  "category": "đồ gia dụng",
+  "inventory": 800,
+  "number_of_sale": 506
+}, {
+  "id": 13,
+  "product_name": "Tanoodle",
+  "selling_price": 20000,
+  "category": "đồ gia dụng",
+  "inventory": 800,
+  "number_of_sale": 385
+}, {
+  "id": 14,
+  "product_name": "Kaymbo",
+  "selling_price": 20000,
+  "category": "đồ gia dụng",
+  "inventory": 400,
+  "number_of_sale": "315"
+}, {
+  "id": 15,
+  "product_name": "Realblab",
+  "selling_price": 20000,
+  "category": "đồ gia dụng",
+  "inventory": 300,
+  "number_of_sale": 205
+}, {
+  "id": 16,
+  "product_name": "Voolith",
+  "selling_price": 110000,
+  "category": "thực phẩm",
+  "inventory": 900,
+  "number_of_sale": 619
+}, {
+  "id": 17,
+  "product_name": "Avavee",
+  "selling_price": 20000,
+  "category": "mỹ phẩm",
+  "inventory": 200,
+  "number_of_sale": "143"
+}, {
+  "id": 18,
+  "product_name": "Twimbo",
+  "selling_price": 200000,
+  "category": "thực phẩm",
+  "inventory": 700,
+  "number_of_sale": "559"
+}, {
+  "id": 19,
+  "product_name": "Twinte",
+  "selling_price": 10000,
+  "category": "thời trang",
+  "inventory": 800,
+  "number_of_sale": 443
+}, {
+  "id": 20,
+  "product_name": "Skiba",
+  "selling_price": 100000,
+  "category": "thời trang",
+  "inventory": 800,
+  "number_of_sale": 562
+}]
