@@ -53,6 +53,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return "mã sản phẩm: " + id + " - tên: " + product_name + " - giá bán: " + format(selling_price) + " - danh mục: " + category + " - số lượng: " + inventory + " - số lượng bán được: " + sales_quantity;
+        return "mã sản phẩm: " + id + " - tên: " + product_name + " - giá bán: " + format(selling_price) + " - danh mục: " + getCategory().getValue() + " - số lượng: " + inventory + " - số lượng bán được: " + sales_quantity;
     }
 }
