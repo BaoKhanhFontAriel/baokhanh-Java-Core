@@ -6,12 +6,13 @@ public class Product {
     private int id;
     private String product_name;
     private int selling_price;
-    private String category;
+    private Category category;
     private int inventory;
     private int sales_quantity;
 
 
-    public Product(int id, String product_name, int selling_price, String category, int inventory, int number_of_sales) {
+    public Product(int id, String product_name, int selling_price, Category category, int inventory, int number_of_sales) {
+        System.out.println("constructor");
         this.id = id;
         this.product_name = product_name;
         this.selling_price = selling_price;
@@ -21,7 +22,7 @@ public class Product {
     }
 
     public Category getCategory() {
-        return Category.getCategory(category);
+        return category;
     }
 
     public int getSellingPrice() {
@@ -53,6 +54,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return "mã sản phẩm: " + id + " - tên: " + product_name + " - giá bán: " + format(selling_price) + " - danh mục: " + getCategory().getValue() + " - số lượng: " + inventory + " - số lượng bán được: " + sales_quantity;
+        return "mã sản phẩm: " + id + " - tên: " + product_name + " - giá bán: " + format(selling_price) + " - danh mục: " + category.getValue() + " - số lượng: " + inventory + " - số lượng bán được: " + sales_quantity;
     }
 }

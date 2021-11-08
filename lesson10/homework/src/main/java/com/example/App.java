@@ -20,7 +20,6 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         System.out.println("bạn chọn: ");
         int number = scanner.nextInt();
-
         switch (number) {
             case 1:
                 repo.printProducts();
@@ -53,5 +52,4 @@ public class App {
         }
         scanner.close();
     }
-
 }

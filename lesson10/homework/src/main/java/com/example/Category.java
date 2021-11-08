@@ -1,9 +1,15 @@
 package com.example;
 
+import com.google.gson.annotations.SerializedName;
+
 public enum Category {
+    @SerializedName("đồ gia dụng")
     HOME_APPLIANCES("đồ gia dụng"),
+    @SerializedName("thời trang")
     FASHION("thời trang"),
+    @SerializedName("mỹ phẩm")
     COSMETICS("mỹ phẩm"),
+    @SerializedName("thực phẩm")
     FOOD("thực phẩm");
 
     private String value;
@@ -13,14 +19,5 @@ public enum Category {
 
     public String getValue(){
         return value;
-    }
-
-    public static Category getCategory(String value){
-        for (Category s : Category.values()){
-            if(s.getValue().equals(value)){
-                return s;
-            }
-        }
-        return null;
     }
 }
