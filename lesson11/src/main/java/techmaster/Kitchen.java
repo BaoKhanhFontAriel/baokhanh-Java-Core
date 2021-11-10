@@ -1,10 +1,10 @@
 package techmaster;
 
-public class Cook extends Employee{
+public class Kitchen extends Employee{
 
     private int serviceCharge;
 
-    public Cook(int id, String name, int age, int basicSalary, int serviceCharge) {
+    public Kitchen(int id, String name, int age, int basicSalary, int serviceCharge) {
         super(id, name, age, basicSalary);
         this.serviceCharge = basicSalary;
     }
