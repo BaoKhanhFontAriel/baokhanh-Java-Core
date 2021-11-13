@@ -1,9 +1,11 @@
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedEncodingException {
         // write your code here
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(new InputStreamReader(System.in, "UTF-8"));      
         System.out.println("nhập tên: ");
         String name = scanner.nextLine();
         System.out.println("nhập tuổi: ");
@@ -16,6 +18,6 @@ public class Main {
         System.out.println(" địa chỉ: " + address);
         scanner.close();
 
-        //t?i sao v?y
+        //tại sao vậy
     }
 }
