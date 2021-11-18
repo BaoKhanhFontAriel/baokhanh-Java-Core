@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args){
         PlayerRepository.getData();
         PlayerRepository.print();
+        PlayerRepository.classifyPlayerByPositions();
 
         System.out.println("lựa chọn 11 cầu thủ");
         System.out.println("1GK - 4DF - 4MF - 2FW");

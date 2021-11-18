@@ -49,7 +49,6 @@ public class PlayerRepository {
     public static void getTeams(int DFsize, int MFsize, int FWsize) {
         ArrayList<Player> selectedTeam = new ArrayList<Player>();
         Random general = new Random();
-        getPositions();
 
         int defenderSize = 0;
         int midFieldSize = 0;
@@ -88,7 +87,7 @@ public class PlayerRepository {
         }
     }
 
-    public static void getPositions() {
+    public static void classifyPlayerByPositions() {
         for (Player player : allPlayers
         ) {
             if (player.getPosition().equals(Position.GK)) {
