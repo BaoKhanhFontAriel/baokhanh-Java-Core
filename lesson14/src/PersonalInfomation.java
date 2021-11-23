@@ -36,7 +36,11 @@ public class PersonalInfomation {
     public static void checkAge(int year) throws InvalidYearException {
         if (year < 1990 || year > LocalDate.now().getYear())
             throw new InvalidYearException("năm sinh phải từ 1990 đến 2021");
-        else
-            System.out.println("năm sinh hợp lệ");
-    }
+        else{
+            int age = LocalDate.now().getYear() - year;
+            if (age >= 18) {
+                System.out.println("bạn đủ tuôi bầu cử");
+            } else System.out.println("bạn chưa đủ tuôi bầu cử");
+        }
+    } 
 }

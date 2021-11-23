@@ -19,19 +19,19 @@ public class CheckTriangle {
             System.out.print(message);
             try {
                 side = Integer.parseInt(scanner.next());
-                checkNegative(side);
+                checkInteger(side);
                 isNumber = true;
             } catch (NumberFormatException e) {
                 System.out.println("Bạn cần phải nhập số, vui lòng nhập lại!");
-            } catch (NegativeIntergerException e) {
+            } catch (InvalidIntergerException e) {
                 System.out.println("Bạn cần phải nhập cạnh lớn hơn 0, vui lòng nhập lại!");
             }
         }
         return side;
     }
 
-    public static void checkNegative(int side) throws NegativeIntergerException {
-        if (side <= 0) throw new NegativeIntergerException("");
+    public static void checkInteger(int side) throws InvalidIntergerException {
+        if (side <= 0) throw new InvalidIntergerException("");
     }
 
     public static void checkSides() {
