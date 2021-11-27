@@ -1,45 +1,43 @@
 package techmaster;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class FilteringBrand {
-    static ArrayList<String> brandList = new ArrayList<String>();
+    private static Map<String, Integer> map = new HashMap<>();
     public static void run(Scanner scanner){
-        getBrands();
-        showBrands();
+        listBrand();
         getProduct(scanner);
     }
 
-    public static void getBrands(){
-        for (Product product : ProductRepository.getProducts()) {
-            if (!brandList.contains(product.getBrand())){
-                brandList.add(product.getBrand());
-            }
-        }
-    }
 
-    public static void showBrands(){
+    public static void listBrand(){
         System.out.println("chọn 1 hãng: ");
-        int index = 0;
-        for (String brand: brandList){
-            System.out.println(index + " - " + brand);
+        for (Product product : ProductRepository.getProducts()) {
+            if (map.containsKey(product.getBrand())){
+                map.put(product.getBrand(), map.get(product.getBrand()) + 1);
+            } else  map.put(product.getBrand(),  1);
+        }
+
+        int index = 1;
+        for(Map.Entry<String, Integer> entry: map.entrySet()) {
+            System.out.println(index + " - " + entry.getKey() + " - " + entry.getValue() + " sản phẩm");
             index++;
-        } 
+        }
     }
 
     public static void getProduct(Scanner scanner){
+        scanner.nextLine();
         System.out.print("bạn chọn: ");
-        int index = scanner.nextInt();
+        String brand = scanner.nextLine();
 
-        if (index >= 0 && index <= 6){
-            String brand = brandList.get(index);
+
             for (Product product: ProductRepository.getProducts()) {
-                if (product.getBrand().equals(brand)){
+                if (product.getBrand().toLowerCase().equals(brand)){
                     System.out.println(product.toString());
                 }
             }
-        }
-        else System.out.println("hãng không tồn tại");
     }
 }
