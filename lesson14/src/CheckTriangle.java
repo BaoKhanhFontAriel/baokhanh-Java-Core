@@ -5,7 +5,7 @@ public class CheckTriangle {
 
     public static void enterInput(Scanner scanner) {
         System.out.println("nhập 3 cạnh: ");
-    
+
         sideA = checkInput("a = ", scanner);
         sideB = checkInput("b = ", scanner);
         sideC = checkInput("c = ", scanner);
@@ -31,7 +31,8 @@ public class CheckTriangle {
     }
 
     public static void checkInteger(int side) throws InvalidIntergerException {
-        if (side <= 0) throw new InvalidIntergerException("");
+        if (side <= 0)
+            throw new InvalidIntergerException("");
     }
 
     public static void checkSides() {
@@ -49,11 +50,10 @@ public class CheckTriangle {
                 || Math.pow(sideB, 2) == Math.pow(sideB, 2) + Math.pow(sideA, 2)
                 || Math.pow(sideC, 2) == Math.pow(sideB, 2) + Math.pow(sideA, 2)) {
             System.out.println("đó là 1 tam giác vuông");
-        } else if (sideA == sideB) {
-            if (sideC == sideB) {
-                System.out.println("đó là 1 tam giác đều");
-            } else
-                System.out.println("đó là 1 tam giác cân");
+        } else if (sideA == sideB || sideA == sideC || sideB == sideC) {
+            System.out.println("đó là 1 tam giác cân");
+        } else if (sideA == sideB & sideA == sideC) {
+            System.out.println("đó là 1 tam giác đều");
         } else
             System.out.println("đó là 1 tam giác thường");
     }
