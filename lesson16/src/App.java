@@ -122,6 +122,6 @@ public class App {
 
     static IAmount IAmount = amount -> {
         if (amount < 50000 || amount > BALANCE - 50000)
-            throw new InvalidAmountException("Số tiền muốn chuyển cần lớn hơn 50.000 và nhỏ hơn số dư tài khoản trừ 50000");
+            throw new InvalidAmountException("Số tiền muốn chuyển cần lớn hơn 50.000 và nhỏ hơn " + (BALANCE -50000));
     };
 }
