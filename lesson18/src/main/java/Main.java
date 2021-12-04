@@ -9,9 +9,24 @@ public class Main {
     public static void main(String[] args){
         movies = MovieRepository.getData();
         showAllMovies();
+        next();
         showHighestViews();
-        sortCategory();
+        next();
+        System.out.println("Liệt kê phim theo movie");
+        sortCategory(Category.MOVIE);
+        next();
+        System.out.println("Liệt kê phim theo TV show: ");
+        sortCategory(Category.TV_SHOW);
+        next();
         sortGenre();
+    }
+    public static void next() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public static void showAllMovies(){
@@ -26,15 +41,13 @@ public class Main {
                 .forEach(System.out::println);
     }
 
-    public static void sortCategory(){
-        System.out.println("Liệt kê phim theo category");
-        System.out.println("movie: ");
+    public static void sortCategory(Category category){
+
         movies.stream()
-                .filter(movie -> movie.getCategory() == Category.MOVIE)
+                .filter(movie -> movie.getCategory() == category)
                 .forEach(System.out::println);
-        System.out.println("TV show: ");
         movies.stream()
-                .filter(movie -> movie.getCategory() == Category.TV_SHOW)
+                .filter(movie -> movie.getCategory() == category)
                 .forEach(System.out::println);
     }
 
