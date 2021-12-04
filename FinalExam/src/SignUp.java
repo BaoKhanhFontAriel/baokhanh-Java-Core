@@ -6,7 +6,7 @@ public class SignUp {
         String username = signUpUsername(scanner);
         String email = signUpEmail(scanner);
         String password = signUpPassword(scanner);
-        UserRepository.addUser(new User(username, email, password));
+        UserRepository.addUser(new User(username, password, email));
     }
 
     public static boolean checkExist(String email){
