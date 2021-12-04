@@ -88,13 +88,19 @@ public class Login {
     public static void forgetPassword(Scanner scanner){
         System.out.print("Nhập email: ");
         String email = scanner.nextLine();
+        boolean isExisted = false;
         for (User user: UserRepository.getUsers()
              ) {
             if (email.equals(user.getEmail())){
+                isExisted = true;
                 user.setPassword(SignUp.signUpPassword(scanner));
                 System.out.println("mật khẩu thay dổi thành công!");
                 login(scanner);
-            } else System.out.println("tài khoản không tồn tại!");
+            }
+        }
+
+        if (!isExisted){
+            System.out.println("email không tồn tại");
         }
     }
 }
