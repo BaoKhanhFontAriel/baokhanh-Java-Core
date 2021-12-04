@@ -43,9 +43,10 @@ public class SignUp {
 
     public static String signUpPassword(Scanner scanner){
         while (true){
+            System.out.println("password chua 8 ki tu, it nhat 1 chu, 1 so va 1 ki tu dac biet");
             System.out.print("nhập password: ");
             String password = scanner.nextLine();
-            String pwRegex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[.,-_;])(?=\\S+$).{7,15}$";
+            String pwRegex = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$";
             if (password.matches(pwRegex)){
                 System.out.println("Mật khẩu hợp lệ! Đăng kí thành công!");
                 return password;

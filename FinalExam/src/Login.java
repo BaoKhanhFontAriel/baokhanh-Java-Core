@@ -84,8 +84,8 @@ public class Login {
     public static void changePassword(Scanner scanner){
         System.out.print("Nhập email: ");
         String email = scanner.nextLine();
-        if (email.equals(mUser.getEmail())){
-            mUser.setEmail(SignUp.signUpPassword(scanner));
+        if (email.equals(mUser.getPassword())){
+            mUser.setPassword(SignUp.signUpPassword(scanner));
             login(scanner);
         } else System.out.println("tài khoản không tồn tại!");
     }
