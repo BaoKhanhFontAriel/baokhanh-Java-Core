@@ -51,7 +51,7 @@ public class Login {
         switch (option){
             case 1: changeUsername(scanner); break;
             case 2: changeEmail(scanner); break;
-            case 3: checkPassword(scanner); break;
+            case 3: changePassword(scanner); break;
             case 4: Main.menu(scanner); break;
             case 0: System.exit(1); break;
             default:
