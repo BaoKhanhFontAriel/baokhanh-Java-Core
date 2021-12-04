@@ -4,6 +4,7 @@ public class Login {
     private static User mUser;
 
     public static void login(Scanner scanner){
+        System.out.println("tiến hành đăng nhập!");
         checkUserName(scanner);
         checkPassword(scanner);
     }
@@ -34,13 +35,12 @@ public class Login {
                 System.out.println("Sai mật khẩu!");
                 menuPassword(scanner);
             } else {
-                System.out.println("Đăng nhập thành công!");
                 menuSuccessfulLogin(scanner);
             }
     }
 
     public static void menuSuccessfulLogin(Scanner scanner){
-        System.out.println("menu đăng nhập: ");
+        System.out.println("Chào mừng " + mUser.getUsername() + ", bạn có thể thực hiện các công việc sau:");
         System.out.println("1 - Thay đổi username\n" +
                 "2 - Thay đổi email\n" +
                 "3 - Thay đổi mật khẩu\n" +
@@ -67,7 +67,7 @@ public class Login {
         int option = Integer.parseInt(scanner.nextLine());
         switch (option){
             case 1: checkPassword(scanner); break;
-            case 2: changePassword(scanner);
+            case 2: forgetPassword(scanner);
         }
     }
 
@@ -82,11 +82,19 @@ public class Login {
     }
 
     public static void changePassword(Scanner scanner){
+        mUser.setPassword(SignUp.signUpPassword(scanner));
+    }
+
+    public static void forgetPassword(Scanner scanner){
         System.out.print("Nhập email: ");
         String email = scanner.nextLine();
-        if (email.equals(mUser.getEmail())){
-            mUser.setPassword(SignUp.signUpPassword(scanner));
-            login(scanner);
-        } else System.out.println("tài khoản không tồn tại!");
+        for (User user: UserRepository.getUsers()
+             ) {
+            if (email.equals(user.getEmail())){
+                user.setPassword(SignUp.signUpPassword(scanner));
+                System.out.println("mật khẩu thay dổi thành công!");
+                login(scanner);
+            } else System.out.println("tài khoản không tồn tại!");
+        }
     }
 }
